@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 3.1...3.15)
 
 project( evaluation.out )
-
+project( gradient.out )
 
 # CGAL and its components
 find_package( CGAL REQUIRED OPTIONAL_COMPONENTS Qt5 )
@@ -37,9 +37,12 @@ endif()
 # ############################
 
 add_executable( evaluation.out  evaluation.cpp )
+add_executable( gradient.out gradient.cpp )
 
 add_to_cached_list( CGAL_EXECUTABLE_TARGETS evaluation.out )
-
+add_to_cached_list( CGAL_EXECUTABLE_TARGETS gradient.out )
 # Link the executable to CGAL and third-party libraries
 target_link_libraries(evaluation.out PRIVATE CGAL::CGAL )
 target_link_libraries(evaluation.out PUBLIC CGAL::CGAL_Basic_viewer)
+target_link_libraries(gradient.out PRIVATE CGAL::CGAL )
+target_link_libraries(gradient.out PUBLIC CGAL::CGAL_Basic_viewer)

@@ -143,6 +143,19 @@ evaluation.out/fast:
 .PHONY : evaluation.out/fast
 
 #=============================================================================
+# Target rules for targets named gradient.out
+
+# Build rule for target.
+gradient.out: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gradient.out
+.PHONY : gradient.out
+
+# fast build rule for target.
+gradient.out/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gradient.out.dir/build.make CMakeFiles/gradient.out.dir/build
+.PHONY : gradient.out/fast
+
+#=============================================================================
 # Target rules for targets named CGAL_Qt5_moc_and_resources_autogen
 
 # Build rule for target.
@@ -202,6 +215,30 @@ evaluation.s: evaluation.cpp.s
 evaluation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluation.out.dir/build.make CMakeFiles/evaluation.out.dir/evaluation.cpp.s
 .PHONY : evaluation.cpp.s
+
+gradient.o: gradient.cpp.o
+.PHONY : gradient.o
+
+# target to build an object file
+gradient.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gradient.out.dir/build.make CMakeFiles/gradient.out.dir/gradient.cpp.o
+.PHONY : gradient.cpp.o
+
+gradient.i: gradient.cpp.i
+.PHONY : gradient.i
+
+# target to preprocess a source file
+gradient.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gradient.out.dir/build.make CMakeFiles/gradient.out.dir/gradient.cpp.i
+.PHONY : gradient.cpp.i
+
+gradient.s: gradient.cpp.s
+.PHONY : gradient.s
+
+# target to generate assembly for a file
+gradient.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gradient.out.dir/build.make CMakeFiles/gradient.out.dir/gradient.cpp.s
+.PHONY : gradient.cpp.s
 
 qrc_CGAL.o: qrc_CGAL.cpp.o
 .PHONY : qrc_CGAL.o
@@ -310,12 +347,16 @@ help:
 	@echo "... CGAL_Qt5_moc_and_resources_autogen"
 	@echo "... CGAL_Qt5_moc_and_resources"
 	@echo "... evaluation.out"
+	@echo "... gradient.out"
 	@echo "... CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.o"
 	@echo "... CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.i"
 	@echo "... CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.s"
 	@echo "... evaluation.o"
 	@echo "... evaluation.i"
 	@echo "... evaluation.s"
+	@echo "... gradient.o"
+	@echo "... gradient.i"
+	@echo "... gradient.s"
 	@echo "... qrc_CGAL.o"
 	@echo "... qrc_CGAL.i"
 	@echo "... qrc_CGAL.s"

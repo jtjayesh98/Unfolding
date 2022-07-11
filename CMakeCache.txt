@@ -177,7 +177,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=evaluation.out
+CMAKE_PROJECT_NAME:STATIC=gradient.out
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -294,6 +294,15 @@ evaluation.out_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 evaluation.out_SOURCE_DIR:STATIC=/home/jayesh/Documents/Unfolding
 
+//Value Computed by CMake
+gradient.out_BINARY_DIR:STATIC=/home/jayesh/Documents/Unfolding
+
+//Value Computed by CMake
+gradient.out_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+gradient.out_SOURCE_DIR:STATIC=/home/jayesh/Documents/Unfolding
+
 
 ########################
 # INTERNAL cache entries
@@ -305,7 +314,7 @@ Boost_DEBUG-ADVANCED:INTERNAL=1
 Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CGAL_Boost_USE_STATIC_LIBS
 CGAL_Boost_USE_STATIC_LIBS-ADVANCED:INTERNAL=1
-CGAL_EXECUTABLE_TARGETS:INTERNAL=evaluation.out
+CGAL_EXECUTABLE_TARGETS:INTERNAL=evaluation.out;evaluation.out;gradient.out
 //CGAL library is configured to use GMP
 CGAL_USE_GMP:INTERNAL=TRUE
 //CGAL library is configured to use MPFR

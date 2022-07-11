@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/jayesh/Documents/Unfolding
 
 # The main recursive "all" target.
 all: CMakeFiles/evaluation.out.dir/all
+all: CMakeFiles/gradient.out.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -73,6 +74,7 @@ preinstall:
 # The main recursive "clean" target.
 clean: CMakeFiles/CGAL_Qt5_moc_and_resources.dir/clean
 clean: CMakeFiles/evaluation.out.dir/clean
+clean: CMakeFiles/gradient.out.dir/clean
 clean: CMakeFiles/CGAL_Qt5_moc_and_resources_autogen.dir/clean
 .PHONY : clean
 
@@ -127,6 +129,32 @@ evaluation.out: CMakeFiles/evaluation.out.dir/rule
 CMakeFiles/evaluation.out.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluation.out.dir/build.make CMakeFiles/evaluation.out.dir/clean
 .PHONY : CMakeFiles/evaluation.out.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/gradient.out.dir
+
+# All Build rule for target.
+CMakeFiles/gradient.out.dir/all: CMakeFiles/CGAL_Qt5_moc_and_resources.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gradient.out.dir/build.make CMakeFiles/gradient.out.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gradient.out.dir/build.make CMakeFiles/gradient.out.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jayesh/Documents/Unfolding/CMakeFiles --progress-num=15,16 "Built target gradient.out"
+.PHONY : CMakeFiles/gradient.out.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/gradient.out.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jayesh/Documents/Unfolding/CMakeFiles 14
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/gradient.out.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jayesh/Documents/Unfolding/CMakeFiles 0
+.PHONY : CMakeFiles/gradient.out.dir/rule
+
+# Convenience name for target.
+gradient.out: CMakeFiles/gradient.out.dir/rule
+.PHONY : gradient.out
+
+# clean rule for target.
+CMakeFiles/gradient.out.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/gradient.out.dir/build.make CMakeFiles/gradient.out.dir/clean
+.PHONY : CMakeFiles/gradient.out.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/CGAL_Qt5_moc_and_resources_autogen.dir
