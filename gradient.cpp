@@ -15,6 +15,7 @@
 #include <cstdlib>
 #include <CGAL/squared_distance_2.h>
 #include <cmath>
+#include <fstream>
 #define 	CGAL_PI   3.14159265358979323846
 
 const double max_dist = 1;
@@ -133,6 +134,7 @@ double test_cost(std::vector<Triangle> triangles, int index_, int trindex){
 }
 
 std::vector<Triangle> gradient_move(std::vector<Triangle> triangles, double learning_rate){
+  // double initial_cost = calculator(dual_set(triangles));
   std::vector<Triangle> retVal;
   Transformations gradients = gradient(triangles);
   for (int i = 0; i<triangles.size(); i++){
@@ -141,11 +143,36 @@ std::vector<Triangle> gradient_move(std::vector<Triangle> triangles, double lear
   return retVal;
 }
 
-void iterator(std::vector<Triangle> triangles, int iterations){
-  for(int i = 0; i < iterations; i++){
 
+
+
+std::vector<Triangle> iterator(std::vector<Triangle> triangles, int iterations, double learning_rate){
+  double initial_cost = calculator(dual_set(triangles));
+  std::ofstream MyExcelFile;
+  MyExcelFile.open("C:\\test.csv");
+
+  MyExcelFile << "T1P1, T1P2, T1P3, T1C, T1A, T2P1, T2P2, T2P3, T2C, T2A" << std::endl;
+  for(int i = 0; i < iterations; i++){
+    triangles = gradient_move(triangles, learning_rate);
+    for (int i = 0; i<triangles.size(); i++){
+      if (i == triangles.size() - 1){
+        MyExcelFile << triangles.at(i).p1 << ", "<< triangles.at(i).p2 << ", "<< triangles.at(i).p3 << ", "<< triangles.at(i).centroid << ", "<< triangles.at(i).area;
+      }
+      else{
+        MyExcelFile << triangles.at(i).p1 << ", "<< triangles.at(i).p2 << ", "<< triangles.at(i).p3 << ", "<< triangles.at(i).centroid << ", "<< triangles.at(i).area<< ", ";
+      }
+      
+    }
+    MyExcelFile<<std::endl;
+    if (calculator(dual_set(triangles)) < 0.0001*initial_cost){
+      return triangles;
+    }
   }
+  MyExcelFile.close();
+  return triangles;
 }
+
+
 
 int main()
 {
@@ -163,12 +190,9 @@ int main()
   // triangles.push_back(pgn4);
   // triangles.push_back(pgn5);
   for (int i = 0; i < 10; i++){
-    std::cout<<calculator(dual_set(triangles))<<std::endl;
-    triangles = gradient_move(triangles, 100);
-    std::cout<<calculator(dual_set(triangles))<<std::endl;
-    std::cout<<std::endl;
+    triangles = iterator(triangles, 1000, 1);
   }
-  
+
   // Transformations gradients = gradient(triangles);
   // std::cout<<":"<<std::endl;
   // Point p(1, 0);
