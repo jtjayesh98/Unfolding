@@ -1,5 +1,6 @@
 /home/jayesh/Documents/Unfolding/CGAL_Qt5_moc_and_resources_autogen/34EZIPZFLO/moc_qglviewer.cpp: /usr/local/include/CGAL/Qt/qglviewer.h \
   /home/jayesh/Documents/Unfolding/CGAL_Qt5_moc_and_resources_autogen/moc_predefs.h \
+  /home/jayesh/Documents/Unfolding/ui_ImageInterface.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/QDateTime \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/QDir \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/QElapsedTimer \
@@ -12,8 +13,10 @@
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/QTextStream \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/QTimer \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/QUrl \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/QVariant \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/QVector \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/QtAlgorithms \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/qabstractitemmodel.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/qalgorithms.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/qarraydata.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/qatomic.h \
@@ -66,6 +69,7 @@
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/qrect.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/qrefcount.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/qregexp.h \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/qregularexpression.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/qscopedpointer.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/qset.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtCore/qshareddata.h \
@@ -147,6 +151,7 @@
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtGui/qtguiglobal.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtGui/qtouchdevice.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtGui/qtransform.h \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtGui/qvalidator.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtGui/qvector2d.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtGui/qvector3d.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtGui/qvector4d.h \
@@ -156,26 +161,51 @@
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtOpenGL/qglcolormap.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtOpenGL/qtopenglglobal.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/QApplication \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/QCheckBox \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/QColorDialog \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/QComboBox \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/QDialog \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/QDoubleSpinBox \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/QFileDialog \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/QGridLayout \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/QHBoxLayout \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/QLabel \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/QMessageBox \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/QOpenGLWidget \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/QPushButton \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/QSpacerItem \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/QSpinBox \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/QTabWidget \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/QTextEdit \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/QVBoxLayout \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/QWidget \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qabstractbutton.h \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qabstractitemdelegate.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qabstractscrollarea.h \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qabstractslider.h \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qabstractspinbox.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qapplication.h \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qboxlayout.h \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qcheckbox.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qcolordialog.h \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qcombobox.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qdialog.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qfiledialog.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qframe.h \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qgridlayout.h \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qlabel.h \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qlayout.h \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qlayoutitem.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qmessagebox.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qopenglwidget.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qpushbutton.h \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qrubberband.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qsizepolicy.h \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qslider.h \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qspinbox.h \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qstyle.h \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qstyleoption.h \
+  /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qtabbar.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qtabwidget.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qtextedit.h \
   /home/jayesh/Qt/Tools/QtDesignStudio/qt5_design_studio_reduced_version/include/QtWidgets/qtwidgets-config.h \

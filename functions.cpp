@@ -103,7 +103,7 @@ double cost(Triangle_2 triangle1, Triangle_2 triangle2, bool connected){
     }
     overlap_area = p.area();
   }
-  return double(overlap_area);
+  return 10.00*double(overlap_area);
 }
 
 double sum_distance(std::vector<Triangle_2> triangles){
