@@ -16,6 +16,7 @@
 #include <CGAL/squared_distance_2.h>
 #include <cmath>
 #include <fstream>
+
 #define 	CGAL_PI   3.14159265358979323846
 
 const double max_dist = 1;
@@ -30,6 +31,7 @@ typedef K::Segment_2 Segment_2;
 
 typedef CGAL::Aff_transformation_2<K> Aff_transformation;
 typedef CGAL::Vector_2<K> Vector;
+typedef CGAL::Vector_3<K> Vector_3;
 typedef CGAL::Direction_2<K> Direction;
 
 using std::cout; using std::endl;
@@ -83,6 +85,29 @@ std::vector<Transformation> gradient_set(){
   set.push_back(a19);
   set.push_back(a20);
   set.push_back(a21);
+  set.push_back(a22);
+  return set;
+}
+
+std::vector<Transformation> rotational_gradients(){
+  std::vector<Transformation> set;
+  Transformation a21 = Transformation(Vector(0, 0), CGAL_PI/10000, 0);
+  Transformation a22 = Transformation(Vector(0, 0), -CGAL_PI/10000, 0);
+
+  set.push_back(a21);
+  set.push_back(a22);
+  return set;
+}
+
+std::vector<Transformation> translational_gradients(){
+  std::vector<Transformation> set;
+  Transformation a17 = Transformation(Vector(0.0001, 0), 0, 0);
+  Transformation a18 = Transformation(Vector(0, 0.0001), 0, 0);
+  Transformation a19 = Transformation(Vector(-0.0001, 0), 0, 0);
+  Transformation a22 = Transformation(Vector(0, -0.0001), 0, 0);
+  set.push_back(a17);
+  set.push_back(a18);
+  set.push_back(a19);
   set.push_back(a22);
   return set;
 }
@@ -144,7 +169,84 @@ std::vector<Triangle> gradient_move(std::vector<Triangle> triangles, double lear
 }
 
 
+std::vector<Triangle> single_move(std::vector<Triangle> triangles, Transformation move, int index, double learning_rate){
+  std::vector<Triangle> retVal = triangles;
+  retVal.at(index) = move.scalar_multiplier(learning_rate).perform_transformation(triangles.at(index));
+  return retVal;
+}
 
+void test_run(std::vector<Triangle> triangles, int index, int iterations, double learning_rate){
+  double initial_cost = calculator(dual_set(triangles));
+  std::vector<Transformation> gradients = gradient_set();
+  std::ofstream MyExcelFile;
+  MyExcelFile.open("run1.csv");
+  std::vector<std::vector<Triangle>> triangle_set;
+  for (int i = 0; i < gradients.size(); i++){
+    triangle_set.push_back(triangles);
+  }
+  // MyExcelFile << "T1P1, T1P2, T1P3, T1C, T1A, T2P1, T2P2, T2P3, T2C, T2A" << std::endl;
+  for(int i = 0; i < iterations; i++){
+    for (int j = 0; j < gradients.size(); j++){
+      triangle_set.at(j) = single_move(triangle_set.at(j), gradients.at(j), index, learning_rate);
+      MyExcelFile << calculator(dual_set(triangle_set.at(j)))<<",";
+    }
+    MyExcelFile<<std::endl;
+    // if (calculator(dual_set(triangles)) < 0.0001*initial_cost){
+    //   return;
+    // }
+  }
+  MyExcelFile.close();
+  return;
+}
+
+void rotation_run(std::vector<Triangle> triangles, int index, int iterations, double learning_rate){
+  double initial_cost = calculator(dual_set(triangles));
+  std::vector<Transformation> rotgrad = rotational_gradients();
+  std::ofstream MyExcelFile;
+  MyExcelFile.open("rot.csv");
+  std::vector<std::vector<Triangle>> triangle_set;
+  for (int i = 0; i < rotgrad.size(); i++){
+    triangle_set.push_back(triangles);
+  }
+  // MyExcelFile << "T1P1, T1P2, T1P3, T1C, T1A, T2P1, T2P2, T2P3, T2C, T2A" << std::endl;
+  for(int i = 0; i < iterations; i++){
+    for (int j = 0; j < rotgrad.size(); j++){
+      triangle_set.at(j) = single_move(triangle_set.at(j), rotgrad.at(j), index, learning_rate);
+      MyExcelFile << calculator(dual_set(triangle_set.at(j)))<<",";
+    }
+    MyExcelFile<<std::endl;
+    // if (calculator(dual_set(triangles)) < 0.0001*initial_cost){
+    //   return;
+    // }
+  }
+  MyExcelFile.close();
+  return;
+}
+
+
+void translation_run(std::vector<Triangle> triangles, int index, int iterations, double learning_rate){
+  double initial_cost = calculator(dual_set(triangles));
+  std::vector<Transformation> transgrad = translational_gradients();
+  std::ofstream MyExcelFile;
+  MyExcelFile.open("trans.csv");
+  std::vector<std::vector<Triangle>> triangle_set;
+  for (int i = 0; i < transgrad.size(); i++){
+    triangle_set.push_back(triangles);
+  }
+  // MyExcelFile << "T1P1, T1P2, T1P3, T1C, T1A, T2P1, T2P2, T2P3, T2C, T2A" << std::endl;
+  for(int i = 0; i < iterations; i++){
+    for (int j = 0; j < transgrad.size(); j++){
+      triangle_set.at(j) = single_move(triangle_set.at(j), transgrad.at(j), index, learning_rate);
+      MyExcelFile << calculator(dual_set(triangle_set.at(j)))<<",";
+    }
+    MyExcelFile<<std::endl;
+    // if (calculator(dual_set(triangles)) < 0.0001*initial_cost){
+    //   return;
+    // }
+  }
+  MyExcelFile.close();
+  return;
+}
 
 std::vector<Triangle> iterator(std::vector<Triangle> triangles, int iterations, double learning_rate){
   double initial_cost = calculator(dual_set(triangles));
@@ -172,32 +274,71 @@ std::vector<Triangle> iterator(std::vector<Triangle> triangles, int iterations, 
   return triangles;
 }
 
+void test_run2(std::vector<Triangle> triangles, int iterations, double learning_rate){
+  double initial_cost = calculator(dual_set(triangles));
+  std::ofstream MyExcelFile;
+  MyExcelFile.open("C:\\test2.csv");
 
+  for(int i = 0; i < iterations; i++){
+    triangles = gradient_move(triangles, learning_rate);
+    MyExcelFile << calculator(dual_set(triangles));
+    MyExcelFile<<std::endl;
+    if (calculator(dual_set(triangles)) < 0.0001*initial_cost){
+      return;
+    }
+  }
+  MyExcelFile.close();
+  return;
+}
+
+double angle_rotation(Triangle triangle){
+  for (int i = 0; i < 3; i++){
+    std::cout<<triangle.triangle[i][0]<<std::endl;
+  }
+}
+
+std::vector<std::vector<double>> original_transformation(std::vector<Triangle> triangles){
+  std::vector<std::vector<double>> retVal;
+  for (int i = 0; i < triangles.size(); i++){
+    retVal.push_back(triangles.at(i).transformation());
+  }
+  return retVal;
+}
+
+std::vector<Triangle> origin_triangles(std::vector<Triangle> triangles){
+  std::vector<Triangle> retVal;
+  for (int i = 0; i< triangles.size(); i++){
+    retVal.push_back(triangles.at(i).origin_triangle());
+  }
+  return retVal;
+}
 
 int main()
 {
   Triangle test = Triangle(Point(0, 0), Point(0, 1), Point(1, 1));
   Triangle pgn1 = Triangle(Point(0,10), Point(4,10), Point(2, 2));
   Triangle pgn2 = Triangle(Point(0,0), Point(4,0), Point(2, 3));
-  // Triangle pgn3 = Triangle(Point(0,0), Point(0,10), Point(5, 5));
-  // Triangle pgn4 = Triangle(Point(1,1), Point(6,7), Point(2,3));
-  // Triangle pgn5 = Triangle(Point(-1, -3), Point(-4, -5), Point(0,1));
+  Triangle pgn3 = Triangle(Point(0,0), Point(0,10), Point(5, 5));
+  Triangle pgn4 = Triangle(Point(1,1), Point(6,7), Point(2,3));
+  Triangle pgn5 = Triangle(Point(-1, -3), Point(-4, -5), Point(0,1));
 
   std::vector<Triangle> triangles;
   triangles.push_back(pgn1);
   triangles.push_back(pgn2);
-  // triangles.push_back(pgn3);
-  // triangles.push_back(pgn4);
-  // triangles.push_back(pgn5);
-  for (int i = 0; i < 10; i++){
-    triangles = iterator(triangles, 1000, 1);
-  }
+  triangles.push_back(pgn3);
+  triangles.push_back(pgn4);
+  triangles.push_back(pgn5);
+  // for (int i = 0; i < 10; i++){
+  //   triangles = iterator(triangles, 1000, 1);
+  // }
+  // test_run2(triangles, 10000, 5);
+  // translation_run(triangles, 0, 1000, 10);
+  std::vector<std::vector<double>> transformations = original_transformation(triangles);
+  triangles = origin_triangles(triangles);
+  Transformations transformations1 = Transformations(transformations);
+  transformations1.perform_transformations(triangles);
 
   // Transformations gradients = gradient(triangles);
-  // std::cout<<":"<<std::endl;
-  // Point p(1, 0);
-  // Point q(-1, -1);
-  // // std::cout<<<<std::endl;
   // for (int i = 0; i < gradients.transformations.size(); i++){
   //   std::cout<<"Vector Movement: "<<gradients.transformations.at(i).retVector()<<std::endl;
   //   std::cout<<"Rotation by: "<<gradients.transformations.at(i).retRot()<<std::endl;

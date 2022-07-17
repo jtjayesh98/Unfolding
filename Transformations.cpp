@@ -11,6 +11,7 @@ class Transformations{
     public:
         int num_obj;
         std::vector<Transformation> transformations;
+        std::vector<std::vector<double>> vec_transformations;
         double score;
         // std::vector<Triangle_2> dual_set(std::vector<Triangle> &triangles);
         void perform_transformations(std::vector<Triangle> &triangles);
@@ -18,6 +19,16 @@ class Transformations{
         double calculate_scores2(std::vector<Triangle> &triangles);  
         Transformations(std::vector<Transformation> transformations_){
           transformations = transformations_;
+          num_obj = transformations_.size();
+          for (int i = 0; i < transformations_.size(); i++){
+            vec_transformations.push_back(transformations_.at(i).vecForm());
+          }
+        }
+        Transformations(std::vector<std::vector<double>> transformations_){
+          vec_transformations = transformations_;
+          for (int i = 0; i < transformations_.size(); i++){
+            transformations.push_back(Transformation(transformations_.at(i)));
+          }
           num_obj = transformations_.size();
         }
         Transformations update_score(double score_);

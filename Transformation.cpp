@@ -33,6 +33,22 @@ class Transformation{
         transformation = rotation*translation;
       }
     }
+    Transformation(std::vector<double> transformations, int order = 0){
+      double delta_x = transformations.at(0);
+      double delta_y = transformations.at(1);
+      double delta_rho = transformations.at(2);
+      translation_vector = Vector(delta_x, delta_y);
+      rho = delta_rho;
+      type = order%2;
+      translation = Aff_transformation(CGAL::TRANSLATION, Vector(delta_x, delta_y));
+      rotation = Aff_transformation(CGAL::ROTATION, sin(delta_rho), cos(delta_rho));
+      if (order%2 == 0){
+        transformation = translation*rotation;
+      }
+      else{
+        transformation = rotation*translation;
+      }
+    }
     Aff_transformation retTransform();
     void mutate();
     Vector retVector();
@@ -43,7 +59,16 @@ class Transformation{
     Aff_transformation retRotation();
     Transformation scalar_multiplier(double multiplier);
     void update(Transformation transformation_);
+    std::vector<double> vecForm();
 };
+
+std::vector<double> Transformation::vecForm(){
+  std::vector<double> retVal;
+  retVal.push_back(this->translation_vector[0]);
+  retVal.push_back(this->translation_vector[1]);
+  retVal.push_back(this->rho);
+  return retVal;
+}
 
 void Transformation::update(Transformation transformation_){
   this->translation_vector = transformation_.translation_vector;

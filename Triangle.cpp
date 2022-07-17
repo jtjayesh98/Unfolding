@@ -1,11 +1,12 @@
 #include <CGAL/Exact_predicates_inexact_constructions_kernel.h>
 #include <CGAL/Triangle_2.h>
 #include <CGAL/Aff_transformation_2.h>
+#include <CGAL/Kernel/global_functions.h>
 typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
 typedef CGAL::Aff_transformation_2<K> Aff_transformation;
 typedef CGAL::Vector_2<K> Vector;
 typedef CGAL::Direction_2<K> Direction;
-
+typedef CGAL::Vector_3<K> Vector3;
 
 
 typedef K::Point_2 Point;
@@ -32,6 +33,7 @@ class Triangle{
         Triangle_2 rotation(Aff_transformation transformation);
         void update(Triangle_2 triangle_);
         Triangle_2 centered_triangle();
+        Triangle origin_triangle();
         Triangle_2 move_back(Triangle_2 triangle_);
         Triangle(Triangle_2 triangle_){
             for (int i = 0; i < 3; i++){
@@ -43,6 +45,9 @@ class Triangle{
                 find_centroid(); 
             }
         }
+        double angle_rotation();
+        Vector vector_translation();
+        std::vector<double> transformation();
 };
 
 void Triangle::find_centroid(){
@@ -63,6 +68,8 @@ Triangle_2 Triangle::centered_triangle(){
     Point p3_(this->p3[0] - this->centroid[0], this->p3[1] - this->centroid[1]);
     return Triangle_2(p1_, p2_, p3_);
 }
+
+
 
 Triangle_2 Triangle::move_back(Triangle_2 triangle_){
     Point p1_(triangle_[0][0] + this->centroid[0], triangle_[0][1] + this->centroid[1]);
@@ -88,3 +95,45 @@ Triangle_2 Triangle::rotation(Aff_transformation transformation){
     return retVal;
 }
 
+double find_angle(Vector vec1, Vector vec2){
+    return CGAL::approximate_angle(Vector3(vec1[0], vec1[1], 0), Vector3(vec2[0], vec2[1], 0));
+}
+
+Vector Triangle::vector_translation(){
+    return -Vector(this->centroid, Point(0, 0));
+}
+
+
+
+double Triangle::angle_rotation(){
+    Triangle_2 origin = this->centered_triangle();
+    double retVal = 0;
+    double check = 999999999;
+    for(int i = 0 ; i < 3; i++){
+        if (check > find_angle(Vector(origin[i][0], origin[i][1]), Vector(0, 1))){
+            check = find_angle(Vector(origin[i][0], origin[i][1]), Vector(0, 1));
+            retVal = check;
+        }
+    }
+    return retVal*CGAL_PI/180;
+}
+
+Triangle Triangle::origin_triangle(){
+    double rotation_angle = this->angle_rotation();
+    Triangle_2 origin = this->centered_triangle();
+    Aff_transformation rotation = Aff_transformation(CGAL::ROTATION, sin(-rotation_angle), cos(-rotation_angle));
+    Triangle_2 rotated = origin.transform(rotation);
+    Triangle retVal = Triangle(rotated);
+    return retVal;
+}
+
+
+std::vector<double> Triangle::transformation(){
+    std::vector<double> retVal;
+    Vector translation = this->vector_translation();
+    double rotation = this->angle_rotation();
+    retVal.push_back(double(translation[0]));
+    retVal.push_back(double(translation[1]));
+    retVal.push_back(rotation);
+    return retVal;
+}
