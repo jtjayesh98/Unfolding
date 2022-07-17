@@ -11,7 +11,7 @@ typedef K::Triangle_2 Triangle_2;
 typedef CGAL::Aff_transformation_2<K> Aff_transformation;
 typedef CGAL::Vector_2<K> Vector;
 typedef CGAL::Direction_2<K> Direction;
-
+//Somethings are redundunt in the class Transformation. I am nowhere using Aff_transformation anymore and it can be deleted now, that I have custom rotation class.
 class Transformation{
   public:
     int type = 0;
