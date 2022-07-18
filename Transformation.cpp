@@ -60,6 +60,7 @@ class Transformation{
     Transformation scalar_multiplier(double multiplier);
     void update(Transformation transformation_);
     std::vector<double> vecForm();
+    
 };
 
 std::vector<double> Transformation::vecForm(){
@@ -69,6 +70,8 @@ std::vector<double> Transformation::vecForm(){
   retVal.push_back(this->rho);
   return retVal;
 }
+
+
 
 void Transformation::update(Transformation transformation_){
   this->translation_vector = transformation_.translation_vector;

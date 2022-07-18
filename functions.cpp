@@ -73,6 +73,7 @@ double overlap(Triangle_2 triangle1, Triangle_2 triangle2){
 }
 
 double cost(Triangle_2 triangle1, Triangle_2 triangle2, bool connected){
+  // std::cout<<2<<std::endl;
   double overlap_area; //Overlap area between two triangles
   double sq_distance = distance(triangle1, triangle2);
   decltype(auto) intR = CGAL::intersection(triangle1, triangle2);
@@ -120,6 +121,7 @@ double sum_distance(std::vector<Triangle_2> triangles){
 }
 
 double calculator(std::vector<Triangle_2> triangles){
+  
   int num_triangles = triangles.size();
   double total_area = 0;
   for (int i = 0; i < num_triangles; i++){
@@ -131,6 +133,7 @@ double calculator(std::vector<Triangle_2> triangles){
   }
   return total_area/2;
 }
+
 
 // '''
 // "total_overlap" is currently doing double the work that it needs to do. Efficiency has to be increased here as the cases for the triangles grows, the time taken will grow. 

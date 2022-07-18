@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Sun Jul 17 07:08:46 2022
+# Make data base, printed on Mon Jul 18 00:19:19 2022
 
 # Variables
 
@@ -53,7 +53,7 @@ VSCODE_CODE_CACHE_PATH = /home/jayesh/.config/Code/CachedData/b06ae3b2d2dbfe28bc
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.9MXMP1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.X2WCP1
 # default
 .LOADED := 
 # default
@@ -93,7 +93,7 @@ SNAP_REEXEC =
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 6324
+VSCODE_PID = 3229
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -103,7 +103,7 @@ BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # makefile (from 'Makefile', line 60)
 CMAKE_SOURCE_DIR = /home/jayesh/Documents/Unfolding
 # environment
-SESSION_MANAGER = local/jayesh-MS-7D25:@/tmp/.ICE-unix/2154,unix/jayesh-MS-7D25:/tmp/.ICE-unix/2154
+SESSION_MANAGER = local/jayesh-MS-7D25:@/tmp/.ICE-unix/2173,unix/jayesh-MS-7D25:/tmp/.ICE-unix/2173
 # automatic
 *F = $(notdir $*)
 # environment
@@ -147,7 +147,7 @@ SNAP_USER_COMMON = /home/jayesh/snap/code/common
 # environment
 SNAP = /snap/code/101
 # environment
-INVOCATION_ID = 9cd2c2b0e1bb4f00b7835b07f4d06e02
+INVOCATION_ID = 85152c964e3a49c1a067ea99891817ba
 # environment
 SNAP_REVISION = 101
 # environment
@@ -183,7 +183,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := default_target
 # environment
-SYSTEMD_EXEC_PID = 2179
+SYSTEMD_EXEC_PID = 2195
 # makefile (from 'Makefile', line 54)
 RM = /usr/bin/cmake -E rm -f
 # environment
@@ -201,9 +201,9 @@ SNAP_DATA = /var/snap/code/101
 # environment
 SNAP_CONTEXT = 9-l4lQHM6duZJwgbcPqfUY09Pa0nmQObrh02evVMe3yu1PJiM0Dv
 # environment
-MANAGERPID = 1958
+MANAGERPID = 1979
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 6171
+GIO_LAUNCHED_DESKTOP_FILE_PID = 3176
 # makefile (from 'Makefile', line 35)
 MAKESILENT = -s
 # environment
@@ -213,7 +213,7 @@ XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/jayesh/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-JOURNAL_STREAM = 8:39597
+JOURNAL_STREAM = 8:42073
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -305,8 +305,8 @@ CGAL_Qt5_moc_and_resources/fast:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
- 
 #  recipe to execute (from 'Makefile', line 129):
+ 
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build
 
 qrc_File.cpp.o:
@@ -598,6 +598,7 @@ qrc_Input.cpp.i:
 qrc_CGAL.s: qrc_CGAL.cpp.s
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
+ 
 #  File does not exist.
 #  File has not been updated.
 
@@ -615,7 +616,6 @@ gradient.cpp.s:
 #  Modification time never checked.
 #  File has not been updated.
 
- 
 all: cmake_check_build_system
 #  Phony target (prerequisite of .PHONY).
 #  Command line target.
@@ -861,6 +861,6 @@ qrc_Input.cpp.s:
 # strcache performance: lookups = 423 / hit rate = 72%
 # hash-table stats:
 # Load=118/8192=1%, Rehash=0, Collisions=0/423=0%
-# Finished Make data base on Sun Jul 17 07:08:46 2022
+# Finished Make data base on Mon Jul 18 00:19:19 2022
 
  

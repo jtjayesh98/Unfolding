@@ -89,6 +89,8 @@ std::vector<Transformation> gradient_set(){
   return set;
 }
 
+
+
 std::vector<Transformation> rotational_gradients(){
   std::vector<Transformation> set;
   Transformation a21 = Transformation(Vector(0, 0), CGAL_PI/10000, 0);
@@ -146,6 +148,43 @@ Transformations gradient(std::vector<Triangle> triangles){
     // std::cout<<std::endl;    
   }
   Transformations retVal = Transformations(gradients);
+  return retVal;
+}
+std::vector<Triangle> origin_triangles(std::vector<Triangle> triangles){
+  std::vector<Triangle> retVal;
+  for (int i = 0; i< triangles.size(); i++){
+    retVal.push_back(triangles.at(i).origin_triangle());
+  }
+  return retVal;
+}
+
+double cost_calculator(std::vector<Triangle> triangles, std::vector<std::vector<double>> transformations){
+  std::vector<Triangle_2> transformed_triangles;
+  for (int i = 0; i < triangles.size(); i++){
+    transformed_triangles.push_back(triangles.at(i).triangle.transform(Transformation(transformations.at(i)).transformation));
+  }
+  // std::cout<<calculator(transformed_triangles)<<std::endl;
+  triangles = origin_triangles(triangles);
+  return calculator(transformed_triangles);
+}
+std::vector<std::vector<double>> gradient2(std::vector<Triangle> triangles, std::vector<std::vector<double>> transformations){
+  std::vector<std::vector<double>> retVal;
+  double change = 0.01;
+  double cost = cost_calculator(triangles, transformations);
+  for (int i = 0; i < triangles.size(); i++){
+    std::vector<double> row;
+    for (int j = 0; j < 3; j++){
+      double temp = transformations.at(i).at(j);
+      transformations.at(i).at(j) = transformations.at(i).at(j) + change;
+      double cost_change = cost_calculator(triangles, transformations) - cost;
+      // std::cout<<cost_change<<std::endl;
+      row.push_back(cost_change/change);
+      transformations.at(i).at(j) = temp;
+
+    }
+    retVal.push_back(row);
+    row.clear();
+  }
   return retVal;
 }
 
@@ -291,12 +330,6 @@ void test_run2(std::vector<Triangle> triangles, int iterations, double learning_
   return;
 }
 
-double angle_rotation(Triangle triangle){
-  for (int i = 0; i < 3; i++){
-    std::cout<<triangle.triangle[i][0]<<std::endl;
-  }
-}
-
 std::vector<std::vector<double>> original_transformation(std::vector<Triangle> triangles){
   std::vector<std::vector<double>> retVal;
   for (int i = 0; i < triangles.size(); i++){
@@ -305,12 +338,30 @@ std::vector<std::vector<double>> original_transformation(std::vector<Triangle> t
   return retVal;
 }
 
-std::vector<Triangle> origin_triangles(std::vector<Triangle> triangles){
-  std::vector<Triangle> retVal;
-  for (int i = 0; i< triangles.size(); i++){
-    retVal.push_back(triangles.at(i).origin_triangle());
+
+
+Transformations gradient_descent(std::vector<Triangle> triangles, Transformations transformations, double learning_rate, int iterations){
+  std::vector<std::vector<double>> retVal;
+  
+  for (int i = 0; i < iterations; i++){
+    
+    std::vector<std::vector<double>> gradients = gradient2(triangles, transformations.vec_transformations);
+    
+    transformations = transformations.sub_vector(gradients, learning_rate);
+    // std::cout<<1<<std::endl;
+    std::cout<<cost_calculator(triangles, transformations.vec_transformations)<<std::endl;
+  }  
+  return transformations;
+}
+
+double norm2change(std::vector<std::vector<double>> original, std::vector<std::vector<double>> transformed){
+  double sum = 0;
+  for (int i = 0; i < original.size(); i++){
+    for (int j = 0; j < 3; j++){
+      sum = sum + pow(original.at(i).at(j) - transformed.at(i).at(j), 2.00);
+    }
   }
-  return retVal;
+  return double(sqrt(sum));
 }
 
 int main()
@@ -323,28 +374,23 @@ int main()
   Triangle pgn5 = Triangle(Point(-1, -3), Point(-4, -5), Point(0,1));
 
   std::vector<Triangle> triangles;
+  triangles.push_back(test);
   triangles.push_back(pgn1);
   triangles.push_back(pgn2);
   triangles.push_back(pgn3);
   triangles.push_back(pgn4);
   triangles.push_back(pgn5);
-  // for (int i = 0; i < 10; i++){
-  //   triangles = iterator(triangles, 1000, 1);
-  // }
-  // test_run2(triangles, 10000, 5);
-  // translation_run(triangles, 0, 1000, 10);
-  std::vector<std::vector<double>> transformations = original_transformation(triangles);
-  triangles = origin_triangles(triangles);
-  Transformations transformations1 = Transformations(transformations);
-  transformations1.perform_transformations(triangles);
 
-  // Transformations gradients = gradient(triangles);
-  // for (int i = 0; i < gradients.transformations.size(); i++){
-  //   std::cout<<"Vector Movement: "<<gradients.transformations.at(i).retVector()<<std::endl;
-  //   std::cout<<"Rotation by: "<<gradients.transformations.at(i).retRot()<<std::endl;
-  //   std::cout<<"Order is: "<<gradients.transformations.at(i).retOrder()<<std::endl;
-  //   std::cout<<std::endl;
-  // }
+
+  std::vector<std::vector<double>> transformations = original_transformation(triangles);
+  
+  triangles = origin_triangles(triangles);
+  
+  Transformations transformations1 = Transformations(transformations);
+  
+  transformations1 = gradient_descent(triangles, transformations1, 0.001, 10000);
+
+  std::cout<<norm2change(transformations, transformations1.vec_transformations)<<std::endl;
 
 
 

@@ -33,7 +33,22 @@ class Transformations{
         }
         Transformations update_score(double score_);
         void mutator();
+        Transformations sub_vector(std::vector<std::vector<double>> gradients, double learning_rate);
 };
+
+Transformations Transformations::sub_vector(std::vector<std::vector<double>> gradients, double learning_rate){
+  std::vector<std::vector<double>> vec_transformations_;
+  
+  for (int i = 0; i < gradients.size(); i++){
+    std::vector<double> row;
+    for (int j = 0; j < 3; j++){
+      row.push_back(this->vec_transformations.at(i).at(j) - learning_rate*gradients.at(i).at(j));
+    }
+    vec_transformations_.push_back(row);
+    row.clear();
+  }
+  return Transformations(vec_transformations_);
+}
 
 std::vector<Triangle_2> dual_set(std::vector<Triangle> &triangles){
   std::vector<Triangle_2> retVal;
