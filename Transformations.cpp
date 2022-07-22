@@ -14,7 +14,7 @@ class Transformations{
         std::vector<std::vector<double>> vec_transformations;
         double score;
         // std::vector<Triangle_2> dual_set(std::vector<Triangle> &triangles);
-        void perform_transformations(std::vector<Triangle> &triangles);
+        std::vector<Triangle> perform_transformations(std::vector<Triangle> &triangles);
         double calculate_scores(std::vector<Triangle> &triangles);
         double calculate_scores2(std::vector<Triangle> &triangles);  
         Transformations(std::vector<Transformation> transformations_){
@@ -83,11 +83,13 @@ double Transformations::calculate_scores2(std::vector<Triangle> &triangles){
     return calculator(dual_set(triangles)) - calculator(dual_set(new_set));
 }
 
-void Transformations::perform_transformations(std::vector<Triangle> &triangles){
+std::vector<Triangle> Transformations::perform_transformations(std::vector<Triangle> &triangles){
     num_obj = this->num_obj;
-    for (int i = 0; i < num_obj; i++){
-        triangles.at(i) = this->transformations.at(i).perform_transformation(triangles.at(i));
+    std::vector<Triangle> retVal;
+    for (int i = 0; i < this->transformations.size(); i++){
+      retVal.push_back(this->transformations.at(i).perform_transformation(triangles.at(i)));
     }
+    return retVal;
 }
 
 Transformations Transformations::update_score(double score_){

@@ -1,0 +1,5 @@
+/home/jayesh/Documents/Unfolding/build-Notepad-Desktop_Qt_6_3_1_GCC_64bit-Debug/CMakeFiles/rebuild_cache.dir
+/home/jayesh/Documents/Unfolding/build-Notepad-Desktop_Qt_6_3_1_GCC_64bit-Debug/CMakeFiles/edit_cache.dir
+/home/jayesh/Documents/Unfolding/build-Notepad-Desktop_Qt_6_3_1_GCC_64bit-Debug/CMakeFiles/Notepad.dir
+/home/jayesh/Documents/Unfolding/build-Notepad-Desktop_Qt_6_3_1_GCC_64bit-Debug/CMakeFiles/Notepad_autogen_timestamp_deps.dir
+/home/jayesh/Documents/Unfolding/build-Notepad-Desktop_Qt_6_3_1_GCC_64bit-Debug/CMakeFiles/Notepad_autogen.dir
