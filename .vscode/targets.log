@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Fri Jul 22 07:15:20 2022
+# Make data base, printed on Thu Aug 25 14:26:08 2022
 
 # Variables
 
@@ -33,7 +33,7 @@ QT_ACCESSIBILITY = 1
 # environment
 SNAP_INSTANCE_NAME = code
 # environment
-GDK_PIXBUF_MODULEDIR = /snap/code/102/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
+GDK_PIXBUF_MODULEDIR = /snap/code/105/usr/lib/x86_64-linux-gnu/gdk-pixbuf-2.0/2.10.0/loaders
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -49,11 +49,11 @@ XDG_DATA_DIRS = /usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/d
 # automatic
 %F = $(notdir $%)
 # environment
-VSCODE_CODE_CACHE_PATH = /home/jayesh/.config/Code/CachedData/3b889b090b5ad5793f524b5d1d39fda662b96a2a
+VSCODE_CODE_CACHE_PATH = /home/jayesh/.config/Code/CachedData/e4503b30fc78200f846c62cf8091b76ff5547662
 # environment
 LANG = C
 # environment
-XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.MPLGP1
+XAUTHORITY = /run/user/1000/.mutter-Xwaylandauth.FRQDR1
 # default
 .LOADED := 
 # default
@@ -93,7 +93,7 @@ SNAP_REEXEC =
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 9672
+VSCODE_PID = 8498
 # environment
 XDG_SESSION_TYPE = wayland
 # automatic
@@ -103,7 +103,7 @@ BAMF_DESKTOP_FILE_HINT = /var/lib/snapd/desktop/applications/code_code.desktop
 # makefile (from 'Makefile', line 60)
 CMAKE_SOURCE_DIR = /home/jayesh/Documents/Unfolding
 # environment
-SESSION_MANAGER = local/jayesh-MS-7D25:@/tmp/.ICE-unix/2159,unix/jayesh-MS-7D25:/tmp/.ICE-unix/2159
+SESSION_MANAGER = local/jayesh-MS-7D25:@/tmp/.ICE-unix/2993,unix/jayesh-MS-7D25:/tmp/.ICE-unix/2993
 # automatic
 *F = $(notdir $*)
 # environment
@@ -145,11 +145,11 @@ MAKEFILES :=
 # environment
 SNAP_USER_COMMON = /home/jayesh/snap/code/common
 # environment
-SNAP = /snap/code/102
+SNAP = /snap/code/105
 # environment
-INVOCATION_ID = a8e9a9ab05c048a2b8a024dcc540f094
+INVOCATION_ID = 733fdbae678a4d63b95bef8eb97dbd00
 # environment
-SNAP_REVISION = 102
+SNAP_REVISION = 105
 # environment
 SNAP_REAL_HOME = /home/jayesh
 # environment
@@ -183,7 +183,7 @@ SNAP_ARCH = amd64
 # makefile
 .DEFAULT_GOAL := default_target
 # environment
-SYSTEMD_EXEC_PID = 2182
+SYSTEMD_EXEC_PID = 3015
 # makefile (from 'Makefile', line 54)
 RM = /usr/bin/cmake -E rm -f
 # environment
@@ -197,23 +197,23 @@ MAKE_VERSION := 4.3
 # environment
 DISABLE_WAYLAND = 1
 # environment
-SNAP_DATA = /var/snap/code/102
+SNAP_DATA = /var/snap/code/105
 # environment
 SNAP_CONTEXT = 9-l4lQHM6duZJwgbcPqfUY09Pa0nmQObrh02evVMe3yu1PJiM0Dv
 # environment
-MANAGERPID = 1965
+MANAGERPID = 2797
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 9619
+GIO_LAUNCHED_DESKTOP_FILE_PID = 8448
 # makefile (from 'Makefile', line 35)
 MAKESILENT = -s
 # environment
-_ = /snap/code/102/usr/share/code/code
+_ = /snap/code/105/usr/share/code/code
 # environment
 XDG_RUNTIME_DIR = /run/user/1000
 # environment
 GDK_PIXBUF_MODULE_FILE = /home/jayesh/snap/code/common/.cache/gdk-pixbuf-loaders.cache
 # environment
-JOURNAL_STREAM = 8:28608
+JOURNAL_STREAM = 8:41788
 # environment
 XDG_SESSION_CLASS = user
 # environment
@@ -225,19 +225,20 @@ QT_IM_MODULE = ibus
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-VSCODE_IPC_HOOK = /run/user/1000/vscode-23644a68-1.69.2-main.sock
+VSCODE_IPC_HOOK = /run/user/1000/vscode-23644a68-1.70.2-main.sock
 # environment
 SNAP_NAME = code
 # environment
-GSETTINGS_SCHEMA_DIR = /snap/code/102/usr/share/glib-2.0/schemas
+GSETTINGS_SCHEMA_DIR = /snap/code/105/usr/share/glib-2.0/schemas
 # environment
 IM_CONFIG_PHASE = 1
 # default
 .RECIPEPREFIX := 
 # automatic
+ 
 <F = $(notdir $<)
 # environment
-SNAP_VERSION = 3b889b09
+SNAP_VERSION = e4503b30
 # default
 SUFFIXES := 
 # environment
@@ -249,7 +250,7 @@ SNAP_COMMON = /var/snap/code/common
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
 # environment
-SNAP_USER_DATA = /home/jayesh/snap/code/102
+SNAP_USER_DATA = /home/jayesh/snap/code/105
 # environment
 XDG_MENU_PREFIX = gnome-
 # environment
@@ -267,9 +268,9 @@ SNAP_LIBRARY_PATH = /var/lib/snapd/lib/gl:/var/lib/snapd/lib/gl32:/var/lib/snapd
 
 # RCS: could not be stat'd.
 # SCCS: could not be stat'd.
-# . (device 66310, inode 2761652): 40 files, no impossibilities.
+# . (device 66310, inode 2761652): 61 files, no impossibilities.
 
-# 40 files, no impossibilities in 3 directories.
+# 61 files, no impossibilities in 3 directories.
 
 # Implicit Rules
 
@@ -293,7 +294,6 @@ CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.o: CGAL_Qt5_moc_and_resource
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
- 
 
 gradient.s: gradient.cpp.s
 #  Phony target (prerequisite of .PHONY).
@@ -314,7 +314,7 @@ qrc_File.cpp.o:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 272):
+#  recipe to execute (from 'Makefile', line 337):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_File.cpp.o
 
 qrc_Input.s: qrc_Input.cpp.s
@@ -322,14 +322,6 @@ qrc_Input.s: qrc_Input.cpp.s
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-
-evaluation.out: cmake_check_build_system
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 137):
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 evaluation.out
 
 depend:
 #  Phony target (prerequisite of .PHONY).
@@ -340,12 +332,6 @@ depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 
 default_target: all
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-
-evaluation.i: evaluation.cpp.i
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -362,15 +348,21 @@ qrc_Input.cpp.o:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 296):
+#  recipe to execute (from 'Makefile', line 361):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_Input.cpp.o
+
+Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.s: Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
 
 qrc_CGAL.cpp.o:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 248):
+#  recipe to execute (from 'Makefile', line 313):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_CGAL.cpp.o
 
 qrc_Input.i: qrc_Input.cpp.i
@@ -385,21 +377,7 @@ qrc_File.i: qrc_File.cpp.i
 #  File does not exist.
 #  File has not been updated.
 
-evaluation.cpp.i:
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 208):
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluation.out.dir/build.make CMakeFiles/evaluation.out.dir/evaluation.cpp.i
-
 CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.i: CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.i
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-
-evaluation.s: evaluation.cpp.s
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -410,7 +388,7 @@ CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.s:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 192):
+#  recipe to execute (from 'Makefile', line 257):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.s
 
 edit_cache/fast: edit_cache
@@ -424,7 +402,7 @@ CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.o:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 176):
+#  recipe to execute (from 'Makefile', line 241):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.o
 
 gradient.out: cmake_check_build_system
@@ -432,19 +410,29 @@ gradient.out: cmake_check_build_system
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 150):
+#  recipe to execute (from 'Makefile', line 137):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gradient.out
 
-evaluation.o: evaluation.cpp.o
+framework/fast:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+#  recipe to execute (from 'Makefile', line 233):
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/framework/CMakeFiles/framework.dir/build.make Tutorial/gltut/framework/CMakeFiles/framework.dir/build
+
+Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 265):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/display.dir/build.make CMakeFiles/display.dir/Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.o
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-08 12:53:39.25901815
+#  Last modified 2022-08-19 11:13:50.664611186
 #  File has been updated.
 #  Successfully updated.
 
@@ -457,6 +445,22 @@ rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
 	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 
+freeglut/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 181):
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/build
+
+framework: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 228):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 framework
+
 qrc_Triangulation_2.o: qrc_Triangulation_2.cpp.o
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
@@ -468,13 +472,21 @@ qrc_Triangulation_2.cpp.i:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 328):
+#  recipe to execute (from 'Makefile', line 393):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_Triangulation_2.cpp.i
 
 .SILENT:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+
+glload/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 194):
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/glload.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/glload.dir/build
 
 clean:
 #  Phony target (prerequisite of .PHONY).
@@ -498,12 +510,20 @@ preinstall/fast:
 #  recipe to execute (from 'Makefile', line 111):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
 
+Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 281):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/display.dir/build.make CMakeFiles/display.dir/Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.s
+
 qrc_CGAL.cpp.i:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 256):
+#  recipe to execute (from 'Makefile', line 321):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_CGAL.cpp.i
 
 edit_cache:
@@ -526,7 +546,7 @@ gradient.cpp.o:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 224):
+#  recipe to execute (from 'Makefile', line 289):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gradient.out.dir/build.make CMakeFiles/gradient.out.dir/gradient.cpp.o
 
 qrc_File.cpp.s:
@@ -534,10 +554,11 @@ qrc_File.cpp.s:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 288):
+#  recipe to execute (from 'Makefile', line 353):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_File.cpp.s
 
 rebuild_cache/fast: rebuild_cache
+ 
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -548,7 +569,7 @@ gradient.out/fast:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 155):
+#  recipe to execute (from 'Makefile', line 142):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gradient.out.dir/build.make CMakeFiles/gradient.out.dir/build
 
 # Not a target:
@@ -563,20 +584,12 @@ qrc_Input.o: qrc_Input.cpp.o
 #  File does not exist.
 #  File has not been updated.
 
-evaluation.cpp.o:
-#  Phony target (prerequisite of .PHONY).
-#  Implicit rule search has not been done.
-#  File does not exist.
-#  File has not been updated.
-#  recipe to execute (from 'Makefile', line 200):
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluation.out.dir/build.make CMakeFiles/evaluation.out.dir/evaluation.cpp.o
-
 qrc_CGAL.cpp.s:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 264):
+#  recipe to execute (from 'Makefile', line 329):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_CGAL.cpp.s
 
 preinstall: all
@@ -592,7 +605,7 @@ qrc_Input.cpp.i:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 304):
+#  recipe to execute (from 'Makefile', line 369):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_Input.cpp.i
 
 qrc_CGAL.s: qrc_CGAL.cpp.s
@@ -601,13 +614,20 @@ qrc_CGAL.s: qrc_CGAL.cpp.s
 #  File does not exist.
 #  File has not been updated.
 
-gradient.cpp.s:
+glimg: cmake_check_build_system
 #  Phony target (prerequisite of .PHONY).
- 
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 240):
+#  recipe to execute (from 'Makefile', line 202):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glimg
+
+gradient.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 305):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gradient.out.dir/build.make CMakeFiles/gradient.out.dir/gradient.cpp.s
 
 # Not a target:
@@ -630,12 +650,28 @@ all: cmake_check_build_system
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jayesh/Documents/Unfolding/CMakeFiles 0
 
+glutil/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 220):
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/build
+
+glimg/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 207):
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/build
+
 help:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 341):
+#  recipe to execute (from 'Makefile', line 406):
 	@echo "The following are some of the valid targets for this Makefile:"
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
@@ -644,14 +680,19 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... CGAL_Qt5_moc_and_resources_autogen"
 	@echo "... CGAL_Qt5_moc_and_resources"
-	@echo "... evaluation.out"
+	@echo "... display"
+	@echo "... framework"
+	@echo "... freeglut"
+	@echo "... glimg"
+	@echo "... glload"
+	@echo "... glutil"
 	@echo "... gradient.out"
 	@echo "... CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.o"
 	@echo "... CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.i"
 	@echo "... CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.s"
-	@echo "... evaluation.o"
-	@echo "... evaluation.i"
-	@echo "... evaluation.s"
+	@echo "... Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.o"
+	@echo "... Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.i"
+	@echo "... Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.s"
 	@echo "... gradient.o"
 	@echo "... gradient.i"
 	@echo "... gradient.s"
@@ -673,7 +714,7 @@ CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.i:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 184):
+#  recipe to execute (from 'Makefile', line 249):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.i
 
 qrc_Triangulation_2.cpp.o:
@@ -681,8 +722,14 @@ qrc_Triangulation_2.cpp.o:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 320):
+#  recipe to execute (from 'Makefile', line 385):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_Triangulation_2.cpp.o
+
+Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.i: Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
 
 clean/fast: clean
 #  Phony target (prerequisite of .PHONY).
@@ -704,26 +751,42 @@ gradient.o: gradient.cpp.o
 #  File does not exist.
 #  File has not been updated.
 
+glutil: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 215):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glutil
+
 qrc_CGAL.o: qrc_CGAL.cpp.o
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
 
-evaluation.out/fast:
+freeglut: cmake_check_build_system
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 142):
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluation.out.dir/build.make CMakeFiles/evaluation.out.dir/build
+#  recipe to execute (from 'Makefile', line 176):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 freeglut
+
+Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 273):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/display.dir/build.make CMakeFiles/display.dir/Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.i
 
 qrc_File.cpp.i:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 280):
+#  recipe to execute (from 'Makefile', line 345):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_File.cpp.i
 
 .NOTPARALLEL:
@@ -736,10 +799,16 @@ qrc_Triangulation_2.cpp.s:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 336):
+#  recipe to execute (from 'Makefile', line 401):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_Triangulation_2.cpp.s
 
 qrc_Triangulation_2.s: qrc_Triangulation_2.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.o: Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.o
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -784,20 +853,21 @@ cmake_check_build_system:
 # | := 
 # variable set hash-table stats:
 # Load=8/32=25%, Rehash=0, Collisions=1/14=7%
-#  recipe to execute (from 'Makefile', line 383):
+#  recipe to execute (from 'Makefile', line 453):
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 
-evaluation.cpp.s:
+display/fast:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 216):
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluation.out.dir/build.make CMakeFiles/evaluation.out.dir/evaluation.cpp.s
+#  recipe to execute (from 'Makefile', line 155):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/display.dir/build.make CMakeFiles/display.dir/build
 
 gradient.i: gradient.cpp.i
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
+ 
 #  File does not exist.
 #  File has not been updated.
 
@@ -814,17 +884,25 @@ CGAL_Qt5_moc_and_resources_autogen/fast:
 #  recipe to execute (from 'Makefile', line 168):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources_autogen.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources_autogen.dir/build
 
-.PHONY: default_target cmake_force edit_cache edit_cache/fast rebuild_cache rebuild_cache/fast all clean clean/fast preinstall preinstall/fast depend CGAL_Qt5_moc_and_resources CGAL_Qt5_moc_and_resources/fast evaluation.out evaluation.out/fast gradient.out gradient.out/fast CGAL_Qt5_moc_and_resources_autogen CGAL_Qt5_moc_and_resources_autogen/fast CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.o CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.o CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.i CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.i CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.s CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.s evaluation.o evaluation.cpp.o evaluation.i evaluation.cpp.i evaluation.s evaluation.cpp.s gradient.o gradient.cpp.o gradient.i gradient.cpp.i gradient.s gradient.cpp.s qrc_CGAL.o qrc_CGAL.cpp.o qrc_CGAL.i qrc_CGAL.cpp.i qrc_CGAL.s qrc_CGAL.cpp.s qrc_File.o qrc_File.cpp.o qrc_File.i qrc_File.cpp.i qrc_File.s qrc_File.cpp.s qrc_Input.o qrc_Input.cpp.o qrc_Input.i qrc_Input.cpp.i qrc_Input.s qrc_Input.cpp.s qrc_Triangulation_2.o qrc_Triangulation_2.cpp.o qrc_Triangulation_2.i qrc_Triangulation_2.cpp.i qrc_Triangulation_2.s qrc_Triangulation_2.cpp.s help cmake_check_build_system
+.PHONY: default_target cmake_force edit_cache edit_cache/fast rebuild_cache rebuild_cache/fast all clean clean/fast preinstall preinstall/fast depend CGAL_Qt5_moc_and_resources CGAL_Qt5_moc_and_resources/fast gradient.out gradient.out/fast display display/fast CGAL_Qt5_moc_and_resources_autogen CGAL_Qt5_moc_and_resources_autogen/fast freeglut freeglut/fast glload glload/fast glimg glimg/fast glutil glutil/fast framework framework/fast CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.o CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.o CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.i CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.i CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.s CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.s Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.o Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.o Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.i Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.i Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.s Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.s gradient.o gradient.cpp.o gradient.i gradient.cpp.i gradient.s gradient.cpp.s qrc_CGAL.o qrc_CGAL.cpp.o qrc_CGAL.i qrc_CGAL.cpp.i qrc_CGAL.s qrc_CGAL.cpp.s qrc_File.o qrc_File.cpp.o qrc_File.i qrc_File.cpp.i qrc_File.s qrc_File.cpp.s qrc_Input.o qrc_Input.cpp.o qrc_Input.i qrc_Input.cpp.i qrc_Input.s qrc_Input.cpp.s qrc_Triangulation_2.o qrc_Triangulation_2.cpp.o qrc_Triangulation_2.i qrc_Triangulation_2.cpp.i qrc_Triangulation_2.s qrc_Triangulation_2.cpp.s help cmake_check_build_system
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+
+glload: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 189):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glload
 
 gradient.cpp.i:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 232):
+#  recipe to execute (from 'Makefile', line 297):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gradient.out.dir/build.make CMakeFiles/gradient.out.dir/gradient.cpp.i
 
 CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.s: CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.s
@@ -832,6 +910,14 @@ CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.s: CGAL_Qt5_moc_and_resource
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
+
+display: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 150):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 display
 
 qrc_File.o: qrc_File.cpp.o
 #  Phony target (prerequisite of .PHONY).
@@ -844,23 +930,23 @@ qrc_Input.cpp.s:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
-#  recipe to execute (from 'Makefile', line 312):
+#  recipe to execute (from 'Makefile', line 377):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/qrc_Input.cpp.s
 
 # files hash-table stats:
-# Load=71/1024=7%, Rehash=0, Collisions=4/266=2%
+# Load=81/1024=8%, Rehash=0, Collisions=10/301=3%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 118 / storage = 1906 B / avg = 16 B
-# current buf: size = 8162 B / used = 1906 B / count = 118 / avg = 16 B
+# strcache buffers: 1 (0) / strings = 149 / storage = 2523 B / avg = 16 B
+# current buf: size = 8162 B / used = 2523 B / count = 149 / avg = 16 B
 
-# strcache performance: lookups = 423 / hit rate = 72%
+# strcache performance: lookups = 499 / hit rate = 70%
 # hash-table stats:
-# Load=118/8192=1%, Rehash=0, Collisions=0/423=0%
-# Finished Make data base on Fri Jul 22 07:15:20 2022
+# Load=149/8192=2%, Rehash=0, Collisions=0/499=0%
+# Finished Make data base on Thu Aug 25 14:26:08 2022
 
  

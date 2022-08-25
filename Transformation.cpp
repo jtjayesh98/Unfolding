@@ -5,7 +5,7 @@
 #include <typeinfo>
 #include <vector>
 #include <random>
-#include "Triangle.cpp"
+#include "Triangles.cpp"
 typedef CGAL::Exact_predicates_inexact_constructions_kernel K;
 typedef K::Triangle_2 Triangle_2;
 typedef CGAL::Aff_transformation_2<K> Aff_transformation;

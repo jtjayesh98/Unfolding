@@ -34,7 +34,12 @@ class Population{
         pop_size = transformations_.size();
       }
       void populate();
+      void add_transformations(Transformations transformations_);
 };
+
+void Population::add_transformations(Transformations transformations_){
+  this->transformations.push_back(transformations_);
+}
 
 void Population::populate(){
   for(int i = 0; i < this->pop_size; i++){

@@ -63,20 +63,61 @@ CMAKE_BINARY_DIR = /home/jayesh/Documents/Unfolding
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/evaluation.out.dir/all
 all: CMakeFiles/gradient.out.dir/all
+all: CMakeFiles/display.dir/all
+all: Tutorial/gltut/glsdk/all
+all: Tutorial/gltut/framework/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
-preinstall:
+preinstall: Tutorial/gltut/glsdk/preinstall
+preinstall: Tutorial/gltut/framework/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/CGAL_Qt5_moc_and_resources.dir/clean
-clean: CMakeFiles/evaluation.out.dir/clean
 clean: CMakeFiles/gradient.out.dir/clean
+clean: CMakeFiles/display.dir/clean
 clean: CMakeFiles/CGAL_Qt5_moc_and_resources_autogen.dir/clean
+clean: Tutorial/gltut/glsdk/clean
+clean: Tutorial/gltut/framework/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory Tutorial/gltut/framework
+
+# Recursive "all" directory target.
+Tutorial/gltut/framework/all: Tutorial/gltut/framework/CMakeFiles/framework.dir/all
+.PHONY : Tutorial/gltut/framework/all
+
+# Recursive "preinstall" directory target.
+Tutorial/gltut/framework/preinstall:
+.PHONY : Tutorial/gltut/framework/preinstall
+
+# Recursive "clean" directory target.
+Tutorial/gltut/framework/clean: Tutorial/gltut/framework/CMakeFiles/framework.dir/clean
+.PHONY : Tutorial/gltut/framework/clean
+
+#=============================================================================
+# Directory level rules for directory Tutorial/gltut/glsdk
+
+# Recursive "all" directory target.
+Tutorial/gltut/glsdk/all: Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/all
+Tutorial/gltut/glsdk/all: Tutorial/gltut/glsdk/CMakeFiles/glload.dir/all
+Tutorial/gltut/glsdk/all: Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/all
+Tutorial/gltut/glsdk/all: Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/all
+.PHONY : Tutorial/gltut/glsdk/all
+
+# Recursive "preinstall" directory target.
+Tutorial/gltut/glsdk/preinstall:
+.PHONY : Tutorial/gltut/glsdk/preinstall
+
+# Recursive "clean" directory target.
+Tutorial/gltut/glsdk/clean: Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/clean
+Tutorial/gltut/glsdk/clean: Tutorial/gltut/glsdk/CMakeFiles/glload.dir/clean
+Tutorial/gltut/glsdk/clean: Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/clean
+Tutorial/gltut/glsdk/clean: Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/clean
+.PHONY : Tutorial/gltut/glsdk/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/CGAL_Qt5_moc_and_resources.dir
@@ -105,39 +146,13 @@ CMakeFiles/CGAL_Qt5_moc_and_resources.dir/clean:
 .PHONY : CMakeFiles/CGAL_Qt5_moc_and_resources.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/evaluation.out.dir
-
-# All Build rule for target.
-CMakeFiles/evaluation.out.dir/all: CMakeFiles/CGAL_Qt5_moc_and_resources.dir/all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluation.out.dir/build.make CMakeFiles/evaluation.out.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluation.out.dir/build.make CMakeFiles/evaluation.out.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jayesh/Documents/Unfolding/CMakeFiles --progress-num=13,14 "Built target evaluation.out"
-.PHONY : CMakeFiles/evaluation.out.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/evaluation.out.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jayesh/Documents/Unfolding/CMakeFiles 14
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/evaluation.out.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jayesh/Documents/Unfolding/CMakeFiles 0
-.PHONY : CMakeFiles/evaluation.out.dir/rule
-
-# Convenience name for target.
-evaluation.out: CMakeFiles/evaluation.out.dir/rule
-.PHONY : evaluation.out
-
-# clean rule for target.
-CMakeFiles/evaluation.out.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluation.out.dir/build.make CMakeFiles/evaluation.out.dir/clean
-.PHONY : CMakeFiles/evaluation.out.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/gradient.out.dir
 
 # All Build rule for target.
 CMakeFiles/gradient.out.dir/all: CMakeFiles/CGAL_Qt5_moc_and_resources.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gradient.out.dir/build.make CMakeFiles/gradient.out.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gradient.out.dir/build.make CMakeFiles/gradient.out.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jayesh/Documents/Unfolding/CMakeFiles --progress-num=15,16 "Built target gradient.out"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jayesh/Documents/Unfolding/CMakeFiles --progress-num=68,69 "Built target gradient.out"
 .PHONY : CMakeFiles/gradient.out.dir/all
 
 # Build rule for subdir invocation for target.
@@ -155,6 +170,36 @@ gradient.out: CMakeFiles/gradient.out.dir/rule
 CMakeFiles/gradient.out.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/gradient.out.dir/build.make CMakeFiles/gradient.out.dir/clean
 .PHONY : CMakeFiles/gradient.out.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/display.dir
+
+# All Build rule for target.
+CMakeFiles/display.dir/all: Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/all
+CMakeFiles/display.dir/all: Tutorial/gltut/glsdk/CMakeFiles/glload.dir/all
+CMakeFiles/display.dir/all: Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/all
+CMakeFiles/display.dir/all: Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/all
+CMakeFiles/display.dir/all: Tutorial/gltut/framework/CMakeFiles/framework.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/display.dir/build.make CMakeFiles/display.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/display.dir/build.make CMakeFiles/display.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jayesh/Documents/Unfolding/CMakeFiles --progress-num=13,14 "Built target display"
+.PHONY : CMakeFiles/display.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/display.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jayesh/Documents/Unfolding/CMakeFiles 55
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/display.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jayesh/Documents/Unfolding/CMakeFiles 0
+.PHONY : CMakeFiles/display.dir/rule
+
+# Convenience name for target.
+display: CMakeFiles/display.dir/rule
+.PHONY : display
+
+# clean rule for target.
+CMakeFiles/display.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/display.dir/build.make CMakeFiles/display.dir/clean
+.PHONY : CMakeFiles/display.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/CGAL_Qt5_moc_and_resources_autogen.dir
@@ -181,6 +226,140 @@ CGAL_Qt5_moc_and_resources_autogen: CMakeFiles/CGAL_Qt5_moc_and_resources_autoge
 CMakeFiles/CGAL_Qt5_moc_and_resources_autogen.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources_autogen.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources_autogen.dir/clean
 .PHONY : CMakeFiles/CGAL_Qt5_moc_and_resources_autogen.dir/clean
+
+#=============================================================================
+# Target rules for target Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir
+
+# All Build rule for target.
+Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/all:
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/depend
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jayesh/Documents/Unfolding/CMakeFiles --progress-num=21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45 "Built target freeglut"
+.PHONY : Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/all
+
+# Build rule for subdir invocation for target.
+Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jayesh/Documents/Unfolding/CMakeFiles 25
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jayesh/Documents/Unfolding/CMakeFiles 0
+.PHONY : Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/rule
+
+# Convenience name for target.
+freeglut: Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/rule
+.PHONY : freeglut
+
+# clean rule for target.
+Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/clean
+.PHONY : Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/clean
+
+#=============================================================================
+# Target rules for target Tutorial/gltut/glsdk/CMakeFiles/glload.dir
+
+# All Build rule for target.
+Tutorial/gltut/glsdk/CMakeFiles/glload.dir/all:
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/glload.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/glload.dir/depend
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/glload.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/glload.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jayesh/Documents/Unfolding/CMakeFiles --progress-num=57,58,59 "Built target glload"
+.PHONY : Tutorial/gltut/glsdk/CMakeFiles/glload.dir/all
+
+# Build rule for subdir invocation for target.
+Tutorial/gltut/glsdk/CMakeFiles/glload.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jayesh/Documents/Unfolding/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tutorial/gltut/glsdk/CMakeFiles/glload.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jayesh/Documents/Unfolding/CMakeFiles 0
+.PHONY : Tutorial/gltut/glsdk/CMakeFiles/glload.dir/rule
+
+# Convenience name for target.
+glload: Tutorial/gltut/glsdk/CMakeFiles/glload.dir/rule
+.PHONY : glload
+
+# clean rule for target.
+Tutorial/gltut/glsdk/CMakeFiles/glload.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/glload.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/glload.dir/clean
+.PHONY : Tutorial/gltut/glsdk/CMakeFiles/glload.dir/clean
+
+#=============================================================================
+# Target rules for target Tutorial/gltut/glsdk/CMakeFiles/glimg.dir
+
+# All Build rule for target.
+Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/all: Tutorial/gltut/glsdk/CMakeFiles/glload.dir/all
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/depend
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jayesh/Documents/Unfolding/CMakeFiles --progress-num=46,47,48,49,50,51,52,53,54,55,56 "Built target glimg"
+.PHONY : Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/all
+
+# Build rule for subdir invocation for target.
+Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jayesh/Documents/Unfolding/CMakeFiles 14
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jayesh/Documents/Unfolding/CMakeFiles 0
+.PHONY : Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/rule
+
+# Convenience name for target.
+glimg: Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/rule
+.PHONY : glimg
+
+# clean rule for target.
+Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/clean
+.PHONY : Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/clean
+
+#=============================================================================
+# Target rules for target Tutorial/gltut/glsdk/CMakeFiles/glutil.dir
+
+# All Build rule for target.
+Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/all: Tutorial/gltut/glsdk/CMakeFiles/glload.dir/all
+Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/all: Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/all
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/depend
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jayesh/Documents/Unfolding/CMakeFiles --progress-num=60,61,62,63,64,65,66,67 "Built target glutil"
+.PHONY : Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/all
+
+# Build rule for subdir invocation for target.
+Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jayesh/Documents/Unfolding/CMakeFiles 22
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jayesh/Documents/Unfolding/CMakeFiles 0
+.PHONY : Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/rule
+
+# Convenience name for target.
+glutil: Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/rule
+.PHONY : glutil
+
+# clean rule for target.
+Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/clean
+.PHONY : Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/clean
+
+#=============================================================================
+# Target rules for target Tutorial/gltut/framework/CMakeFiles/framework.dir
+
+# All Build rule for target.
+Tutorial/gltut/framework/CMakeFiles/framework.dir/all: Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/all
+Tutorial/gltut/framework/CMakeFiles/framework.dir/all: Tutorial/gltut/glsdk/CMakeFiles/glload.dir/all
+Tutorial/gltut/framework/CMakeFiles/framework.dir/all: Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/all
+Tutorial/gltut/framework/CMakeFiles/framework.dir/all: Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/all
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/framework/CMakeFiles/framework.dir/build.make Tutorial/gltut/framework/CMakeFiles/framework.dir/depend
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/framework/CMakeFiles/framework.dir/build.make Tutorial/gltut/framework/CMakeFiles/framework.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jayesh/Documents/Unfolding/CMakeFiles --progress-num=15,16,17,18,19,20 "Built target framework"
+.PHONY : Tutorial/gltut/framework/CMakeFiles/framework.dir/all
+
+# Build rule for subdir invocation for target.
+Tutorial/gltut/framework/CMakeFiles/framework.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jayesh/Documents/Unfolding/CMakeFiles 53
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Tutorial/gltut/framework/CMakeFiles/framework.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jayesh/Documents/Unfolding/CMakeFiles 0
+.PHONY : Tutorial/gltut/framework/CMakeFiles/framework.dir/rule
+
+# Convenience name for target.
+framework: Tutorial/gltut/framework/CMakeFiles/framework.dir/rule
+.PHONY : framework
+
+# clean rule for target.
+Tutorial/gltut/framework/CMakeFiles/framework.dir/clean:
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/framework/CMakeFiles/framework.dir/build.make Tutorial/gltut/framework/CMakeFiles/framework.dir/clean
+.PHONY : Tutorial/gltut/framework/CMakeFiles/framework.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

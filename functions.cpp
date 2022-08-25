@@ -72,6 +72,8 @@ double overlap(Triangle_2 triangle1, Triangle_2 triangle2){
   return double(overlap_area);
 }
 
+
+
 double cost(Triangle_2 triangle1, Triangle_2 triangle2, bool connected){
   // std::cout<<2<<std::endl;
   double overlap_area; //Overlap area between two triangles
@@ -80,7 +82,12 @@ double cost(Triangle_2 triangle1, Triangle_2 triangle2, bool connected){
   if (!intR){
     if(connected){
       // std::cout<<"Case 1"<<std::endl;
-      return double(sq_distance);
+      if (sq_distance < 0.1){
+        return 0;
+      }
+      else{
+        return double(sq_distance-0.1)/10;
+      }
     }
     else{
       return 0;
@@ -96,6 +103,8 @@ double cost(Triangle_2 triangle1, Triangle_2 triangle2, bool connected){
     overlap_area = 0;
   }
   else if(const std::vector<Point>* v = boost::get<std::vector<Point>>(&*intR)){
+    // Triangle_2 triangle1 = Triangle2(v->at(0), v->at(1), v->at(2))
+    // Triangle_2 trian    
     int count = v->size();
     Polygon_2 p;
     for(int i = 0; i < count; i++){

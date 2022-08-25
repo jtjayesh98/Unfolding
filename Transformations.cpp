@@ -13,7 +13,6 @@ class Transformations{
         std::vector<Transformation> transformations;
         std::vector<std::vector<double>> vec_transformations;
         double score;
-        // std::vector<Triangle_2> dual_set(std::vector<Triangle> &triangles);
         std::vector<Triangle> perform_transformations(std::vector<Triangle> &triangles);
         double calculate_scores(std::vector<Triangle> &triangles);
         double calculate_scores2(std::vector<Triangle> &triangles);  
@@ -42,7 +41,7 @@ Transformations Transformations::sub_vector(std::vector<std::vector<double>> gra
   for (int i = 0; i < gradients.size(); i++){
     std::vector<double> row;
     for (int j = 0; j < 3; j++){
-      row.push_back(this->vec_transformations.at(i).at(j) - learning_rate*gradients.at(i).at(j));
+      row.push_back(this->vec_transformations.at(i).at(j) - gradients.at(i).at(j));
     }
     vec_transformations_.push_back(row);
     row.clear();

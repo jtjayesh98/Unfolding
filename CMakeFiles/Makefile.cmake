@@ -11,6 +11,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.22.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.22.1/CMakeSystem.cmake"
   "CMakeLists.txt"
+  "Tutorial/gltut/framework/CMakeLists.txt"
+  "Tutorial/gltut/glsdk/CMakeLists.txt"
   "icons/File.qrc"
   "icons/Input.qrc"
   "icons/Triangulation_2.qrc"
@@ -110,6 +112,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake"
   "/usr/share/cmake-3.22/Modules/Compiler/GNU.cmake"
   "/usr/share/cmake-3.22/Modules/FindBoost.cmake"
+  "/usr/share/cmake-3.22/Modules/FindOpenGL.cmake"
   "/usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.22/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake-3.22/Modules/FindThreads.cmake"
@@ -135,12 +138,19 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "icons/Triangulation_2.qrc.depends"
   "CMakeFiles/CGAL_Qt5_moc_and_resources_autogen.dir/AutogenInfo.json"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Tutorial/gltut/glsdk/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "Tutorial/gltut/framework/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/CGAL_Qt5_moc_and_resources.dir/DependInfo.cmake"
-  "CMakeFiles/evaluation.out.dir/DependInfo.cmake"
   "CMakeFiles/gradient.out.dir/DependInfo.cmake"
+  "CMakeFiles/display.dir/DependInfo.cmake"
   "CMakeFiles/CGAL_Qt5_moc_and_resources_autogen.dir/DependInfo.cmake"
+  "Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/DependInfo.cmake"
+  "Tutorial/gltut/glsdk/CMakeFiles/glload.dir/DependInfo.cmake"
+  "Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/DependInfo.cmake"
+  "Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/DependInfo.cmake"
+  "Tutorial/gltut/framework/CMakeFiles/framework.dir/DependInfo.cmake"
   )

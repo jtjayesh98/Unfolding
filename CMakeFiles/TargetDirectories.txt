@@ -1,6 +1,15 @@
 /home/jayesh/Documents/Unfolding/CMakeFiles/CGAL_Qt5_moc_and_resources.dir
-/home/jayesh/Documents/Unfolding/CMakeFiles/evaluation.out.dir
 /home/jayesh/Documents/Unfolding/CMakeFiles/gradient.out.dir
+/home/jayesh/Documents/Unfolding/CMakeFiles/display.dir
 /home/jayesh/Documents/Unfolding/CMakeFiles/edit_cache.dir
 /home/jayesh/Documents/Unfolding/CMakeFiles/rebuild_cache.dir
 /home/jayesh/Documents/Unfolding/CMakeFiles/CGAL_Qt5_moc_and_resources_autogen.dir
+/home/jayesh/Documents/Unfolding/Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir
+/home/jayesh/Documents/Unfolding/Tutorial/gltut/glsdk/CMakeFiles/glload.dir
+/home/jayesh/Documents/Unfolding/Tutorial/gltut/glsdk/CMakeFiles/glimg.dir
+/home/jayesh/Documents/Unfolding/Tutorial/gltut/glsdk/CMakeFiles/glutil.dir
+/home/jayesh/Documents/Unfolding/Tutorial/gltut/glsdk/CMakeFiles/edit_cache.dir
+/home/jayesh/Documents/Unfolding/Tutorial/gltut/glsdk/CMakeFiles/rebuild_cache.dir
+/home/jayesh/Documents/Unfolding/Tutorial/gltut/framework/CMakeFiles/framework.dir
+/home/jayesh/Documents/Unfolding/Tutorial/gltut/framework/CMakeFiles/edit_cache.dir
+/home/jayesh/Documents/Unfolding/Tutorial/gltut/framework/CMakeFiles/rebuild_cache.dir

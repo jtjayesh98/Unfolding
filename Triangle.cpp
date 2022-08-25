@@ -21,6 +21,7 @@ class Triangle{
         Triangle_2 triangle;
         double area;
         void find_centroid();
+        Triangle();
         Triangle(Point p1_, Point p2_, Point p3_){
             p1 = p1_;
             p2 = p2_;

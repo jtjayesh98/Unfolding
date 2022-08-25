@@ -130,19 +130,6 @@ CGAL_Qt5_moc_and_resources/fast:
 .PHONY : CGAL_Qt5_moc_and_resources/fast
 
 #=============================================================================
-# Target rules for targets named evaluation.out
-
-# Build rule for target.
-evaluation.out: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 evaluation.out
-.PHONY : evaluation.out
-
-# fast build rule for target.
-evaluation.out/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluation.out.dir/build.make CMakeFiles/evaluation.out.dir/build
-.PHONY : evaluation.out/fast
-
-#=============================================================================
 # Target rules for targets named gradient.out
 
 # Build rule for target.
@@ -156,6 +143,19 @@ gradient.out/fast:
 .PHONY : gradient.out/fast
 
 #=============================================================================
+# Target rules for targets named display
+
+# Build rule for target.
+display: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 display
+.PHONY : display
+
+# fast build rule for target.
+display/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/display.dir/build.make CMakeFiles/display.dir/build
+.PHONY : display/fast
+
+#=============================================================================
 # Target rules for targets named CGAL_Qt5_moc_and_resources_autogen
 
 # Build rule for target.
@@ -167,6 +167,71 @@ CGAL_Qt5_moc_and_resources_autogen: cmake_check_build_system
 CGAL_Qt5_moc_and_resources_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources_autogen.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources_autogen.dir/build
 .PHONY : CGAL_Qt5_moc_and_resources_autogen/fast
+
+#=============================================================================
+# Target rules for targets named freeglut
+
+# Build rule for target.
+freeglut: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 freeglut
+.PHONY : freeglut
+
+# fast build rule for target.
+freeglut/fast:
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/freeglut.dir/build
+.PHONY : freeglut/fast
+
+#=============================================================================
+# Target rules for targets named glload
+
+# Build rule for target.
+glload: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glload
+.PHONY : glload
+
+# fast build rule for target.
+glload/fast:
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/glload.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/glload.dir/build
+.PHONY : glload/fast
+
+#=============================================================================
+# Target rules for targets named glimg
+
+# Build rule for target.
+glimg: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glimg
+.PHONY : glimg
+
+# fast build rule for target.
+glimg/fast:
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/glimg.dir/build
+.PHONY : glimg/fast
+
+#=============================================================================
+# Target rules for targets named glutil
+
+# Build rule for target.
+glutil: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 glutil
+.PHONY : glutil
+
+# fast build rule for target.
+glutil/fast:
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/build.make Tutorial/gltut/glsdk/CMakeFiles/glutil.dir/build
+.PHONY : glutil/fast
+
+#=============================================================================
+# Target rules for targets named framework
+
+# Build rule for target.
+framework: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 framework
+.PHONY : framework
+
+# fast build rule for target.
+framework/fast:
+	$(MAKE) $(MAKESILENT) -f Tutorial/gltut/framework/CMakeFiles/framework.dir/build.make Tutorial/gltut/framework/CMakeFiles/framework.dir/build
+.PHONY : framework/fast
 
 CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.o: CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.o
 .PHONY : CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.o
@@ -192,29 +257,29 @@ CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/CGAL_Qt5_moc_and_resources.dir/build.make CMakeFiles/CGAL_Qt5_moc_and_resources.dir/CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.s
 .PHONY : CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.cpp.s
 
-evaluation.o: evaluation.cpp.o
-.PHONY : evaluation.o
+Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.o: Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.o
+.PHONY : Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.o
 
 # target to build an object file
-evaluation.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluation.out.dir/build.make CMakeFiles/evaluation.out.dir/evaluation.cpp.o
-.PHONY : evaluation.cpp.o
+Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/display.dir/build.make CMakeFiles/display.dir/Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.o
+.PHONY : Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.o
 
-evaluation.i: evaluation.cpp.i
-.PHONY : evaluation.i
+Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.i: Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.i
+.PHONY : Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.i
 
 # target to preprocess a source file
-evaluation.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluation.out.dir/build.make CMakeFiles/evaluation.out.dir/evaluation.cpp.i
-.PHONY : evaluation.cpp.i
+Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/display.dir/build.make CMakeFiles/display.dir/Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.i
+.PHONY : Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.i
 
-evaluation.s: evaluation.cpp.s
-.PHONY : evaluation.s
+Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.s: Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.s
+.PHONY : Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.s
 
 # target to generate assembly for a file
-evaluation.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/evaluation.out.dir/build.make CMakeFiles/evaluation.out.dir/evaluation.cpp.s
-.PHONY : evaluation.cpp.s
+Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/display.dir/build.make CMakeFiles/display.dir/Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.s
+.PHONY : Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.cpp.s
 
 gradient.o: gradient.cpp.o
 .PHONY : gradient.o
@@ -346,14 +411,19 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... CGAL_Qt5_moc_and_resources_autogen"
 	@echo "... CGAL_Qt5_moc_and_resources"
-	@echo "... evaluation.out"
+	@echo "... display"
+	@echo "... framework"
+	@echo "... freeglut"
+	@echo "... glimg"
+	@echo "... glload"
+	@echo "... glutil"
 	@echo "... gradient.out"
 	@echo "... CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.o"
 	@echo "... CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.i"
 	@echo "... CGAL_Qt5_moc_and_resources_autogen/mocs_compilation.s"
-	@echo "... evaluation.o"
-	@echo "... evaluation.i"
-	@echo "... evaluation.s"
+	@echo "... Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.o"
+	@echo "... Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.i"
+	@echo "... Tut_03_OpenGLs_Moving_Triangle/CPUPositionOffset.s"
 	@echo "... gradient.o"
 	@echo "... gradient.i"
 	@echo "... gradient.s"
